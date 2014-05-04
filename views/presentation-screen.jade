@@ -1,0 +1,41 @@
+doctype
+html
+  head
+    title presenter notes
+    link(rel="icon",href="/css/images/logo.png")
+    link(href='css/presenter.css', rel='stylesheet', type='text/css')
+    script(type='text/javascript', src='js/jquery.min.js')
+    script(type='text/javascript', src='js/velocity.min.js')
+    script(type='text/javascript')
+      | $.animate = $.velocity;
+    script(type='text/javascript', src='js/jmpress.custom.js')
+    script
+      | var notesUrl = 'index-notes.html';
+      | var PREFIX = "jmpress-presentation-";
+      | window.addEventListener("message", function(event) {
+      |   if(typeof event.data !== "string" || event.data.indexOf(PREFIX) !== 0) {
+      |     return;
+      |   }
+      |   var json = JSON.parse(event.data.slice(PREFIX.length));
+      |   switch(json.type) {
+      |   case "afterInit":
+      |     event.source.postMessage(PREFIX + JSON.stringify({type:"listen"}), "*");
+      |     break;
+      |   case "select":
+      |     window.opener.postMessage(PREFIX + JSON.stringify(json), "*");
+      |     console.log(json);
+      |     if(notesUrl && /[a-z0-9\-]+/i.test(json.targetId))
+      |       $("#notesframe").attr("src", notesUrl+"#"+json.targetId);
+      |     break;
+      |   case "url":
+      |     event.source.postMessage(PREFIX + JSON.stringify({type:"ok"}), "*");
+      |     $("#frame").attr("src", json.url);
+      |     notesUrl = json.notesUrl || notesUrl;
+      |     if(notesUrl)
+      |       $("#notesframe").attr("src", notesUrl);
+      |     break;
+      |   }
+      | });
+  body
+    iframe#frame(src="javascript:document.write('waiting for presentation message...');")
+    iframe#notesframe(src="javascript:document.write('waiting for presentation message...');")

@@ -1,0 +1,23 @@
+doctype
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    title Haxe for Makers
+    link(rel="icon",href="/css/images/logo.png")
+    meta(name='description', content='Personal (Digital) Fabrication, Micro Electronics DIY and 3D Printers are transitioning from hobbies for weirdos to rewarding carreers. Discover how you can leverage your Haxe knowledge in this new exciting and geeky world.')
+    meta(name='author', content='Franco Ponticelli @fponticelli')
+    meta(name='viewport', content='width=device-width, maximum-scale=1.0, initial-scale=1.0, user-scalable=yes')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    link(href='css/style.css', rel='stylesheet', type='text/css')
+    link(href='css/font-awesome.min.css', rel='stylesheet', type='text/css')
+    script(type='text/javascript', src='js/jquery.min.js')
+    script(type='text/javascript', src='js/velocity.min.js')
+    script(type='text/javascript')
+      | $.animate = $.velocity;
+    script(type='text/javascript', src='js/jmpress.custom.js')
+  body
+    #presentation
+      include slides/index
+    script(type='text/javascript')
+      | $('#presentation').jmpress({
+      | });
