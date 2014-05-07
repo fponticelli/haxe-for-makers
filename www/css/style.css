@@ -307,6 +307,15 @@ figure figcaption {
 .split-big .right {
   left: 50%;
 }
+.size25 {
+  zoom: 25%;
+}
+.size50 {
+  zoom: 50%;
+}
+.size75 {
+  zoom: 75%;
+}
 .zoom-out {
   zoom: 0.6;
 }
