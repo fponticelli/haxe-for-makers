@@ -1,0 +1,23 @@
+h1 GPS #2
+
+pre.sh_haxe.
+  function onData(line : String) {
+    if(line.substr(0, 3) != "$GP")
+      throw 'Invalid line: $line';
+    switch(line.substr(3, 3)) {
+      case "GGA":
+        var d    = line.split(','),
+            dlat = d[2].indexOf("."),
+            dlon = d[4].indexOf(".");
+
+        time = d[1].substr(0, 6);
+        latitude = (Std.parseInt(d[2].substr(0,dlat-2)) +
+          Std.parseFloat(d[2].substr(dlat-2))/60) *
+          (d[3] == "S" ? -1 : 1);
+        longitude = (Std.parseInt(d[4].substr(0,dlon-2)) +
+          Std.parseFloat(d[4].substr(dlon-2))/60) *
+          (d[5] == "W" ? -1 : 1);
+        satellites = Std.parseInt(d[7]);
+        altitude = Std.parseFloat(d[9]);
+    }
+  }

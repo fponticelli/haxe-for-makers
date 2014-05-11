@@ -1,0 +1,24 @@
+h1 GPS #1
+
+pre.sh_haxe.
+  class GPS {
+    // ...
+
+    public function new(serial : Serial) {
+      serial.onData((function() {
+        var buf = '';
+        return function(e) {
+          switch(e.data)
+          {
+            case "\n":
+              onData(buf);
+              buf = "";
+            case c:
+              buf += c;
+          }
+        };
+      })());
+    }
+
+    // ...
+  }

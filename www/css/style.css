@@ -218,6 +218,13 @@ a:hover {
 p {
   text-align: center;
 }
+pre {
+  padding: 0.5em;
+  font-size: 60%;
+  overflow: auto;
+  max-height: 430px;
+  font-family: menlo, monospace;
+}
 .step {
   background-image: -webkit-radial-gradient(rgba(255,255,255,0.8), rgba(220,220,220,0.9));
   background-image: -moz-radial-gradient(rgba(255,255,255,0.8), rgba(220,220,220,0.9));
@@ -296,7 +303,8 @@ figure.fullpage {
   padding: 0;
   margin: 0;
 }
-figure.fullpage iframe {
+figure.fullpage iframe,
+figure.fullpage img {
   width: 100%;
   height: 100%;
   max-height: 100%;
@@ -309,6 +317,22 @@ figure.fullpage iframe {
 }
 .split .right {
   left: 50%;
+}
+.split .third-1,
+.split .third-2,
+.split .third-3 {
+  width: 33%;
+  zoom: 0.8;
+  position: absolute;
+}
+.split .third-1 {
+  left: 0;
+}
+.split .third-2 {
+  left: 33.33%;
+}
+.split .third-3 {
+  left: 66.66%;
 }
 .split-big .left,
 .split-big .right {

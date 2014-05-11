@@ -1,0 +1,25 @@
+h1 RGB Led
+
+pre.sh_haxe.
+  class RGBLed {
+    var pinR : String; var pinG : String; var pinB : String;
+    public function new(pinR : String, pinG : String, pinB : String) {
+      this.pinR = pinR; this.pinG = pinG; this.pinB = pinB;
+    }
+
+    public function setColor(color : Color) {
+      var rgbx = color.toRGBX();
+      Bone.analogWrite(pinR, rgbx.redf);
+      Bone.analogWrite(pinG, rgbx.greenf);
+      Bone.analogWrite(pinB, rgbx.bluef);
+    }
+  }
+
+  public static function main() {
+    var led = new RGBLed("P8_19", "P9_14", "P8_13", false),
+        hsl = new HSL(0, 1, 0.5);
+    js.Node.setInterval(function() {
+      led.setColor(hsl);
+      hsl.hue += 1;
+    }, 20);
+  }
