@@ -9,11 +9,11 @@ $(function() {
 
 	function enter() {
 		var self = this;
-		$(self).find('> .split img[data-src], > figure img[data-src]').each(function(_, image) {
+		$(self).find('> .split img[data-src], > .split-big img[data-src], > figure img[data-src]').each(function(_, image) {
 			$(image).attr("src", $(image).attr("data-src"));
 		});
 		setTimeout(function() {
-			$(self).find('> .split iframe[data-src], > figure iframe[data-src]').each(function(_, iframe) {
+			$(self).find('> .split iframe[data-src], > .split-big img[data-src], > figure iframe[data-src]').each(function(_, iframe) {
 				$(iframe).attr("src", $(iframe).attr("data-src"));
 			});
 		}, 2000);
@@ -26,7 +26,7 @@ $(function() {
 			setTimeout(function() {
 				if(self === $('.active')[0])
 					return;
-				$(self).find('> figure [data-src],> .split [data-src]').each(function(_, iframe) {
+				$(self).find('> figure [data-src], > .split-big [data-src], > .split [data-src]').each(function(_, iframe) {
 					$(iframe).attr("src", "images/blank.gif");
 				});
 			}, 6000);
