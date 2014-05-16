@@ -64,41 +64,41 @@
     include tools-use
 #tools-electronics.step(data-x='7000')
   include tools-electronics
-  #tools-sensors.step(data-x='-220',data-y='450',data-scale="0.48")
-    include tools-sensors
-  #tools-actuators.step(data-x='220',data-y='450',data-scale="0.48")
-    include tools-actuators
-  #tools-breakout.step(data-x='-220',data-y='747',data-scale="0.48")
+  #tools-breakout.step(data-x='-220',data-y='450',data-scale="0.48")
     include tools-breakout
-  #tools-components.step(data-x='220',data-y='747',data-scale="0.48")
+  #tools-components.step(data-x='220',data-y='450',data-scale="0.48")
     include tools-components
+  #tools-sensors.step(data-x='-220',data-y='747',data-scale="0.48")
+    include tools-sensors
+  #tools-actuators.step(data-x='220',data-y='747',data-scale="0.48")
+    include tools-actuators
 #tools-libraries.step(data-x='8000')
   include tools-libraries
   #tools-libraries-openbuildspartstore.step(data-x='-220',data-y='450',data-scale="0.48")
     include tools-libraries-openbuildspartstore
-  #tools-libraries-adafruit.step(data-x='220',data-y='450',data-scale="0.48")
+  #tools-libraries-openbuildspartstore-2.step(data-x='220',data-y='450',data-scale="0.48")
+    include tools-libraries-openbuildspartstore-2
+  #tools-libraries-openbuildspartstore-3.step(data-x='-220',data-y='747',data-scale="0.48")
+    include tools-libraries-openbuildspartstore-3
+  #tools-libraries-adafruit.step(data-x='-220',data-y='1044',data-scale="0.48")
     include tools-libraries-adafruit
-  #tools-libraries-sparkfun.step(data-x='-220',data-y='747',data-scale="0.48")
+  #tools-libraries-adafruit-2.step(data-x='220',data-y='1044',data-scale="0.48")
+    include tools-libraries-adafruit-2
+  #tools-libraries-sparkfun.step(data-x='-220',data-y='1341',data-scale="0.48")
     include tools-libraries-sparkfun
-  #tools-libraries-seeed.step(data-x='220',data-y='747',data-scale="0.48")
+  #tools-libraries-seeed.step(data-x='220',data-y='1341',data-scale="0.48")
     include tools-libraries-seeed
 #tools-virtual-libraries.step(data-x='9000')
   include tools-virtual-libraries
   #tools-libraries-thingiverse.step(data-x='-220',data-y='450',data-scale="0.48")
     include tools-libraries-thingiverse
-  #tools-libraries-youmagine.step(data-x='220',data-y='450',data-scale="0.48")
-    include tools-libraries-youmagine
-  #tools-libraries-cubehero.step(data-x='-220',data-y='747',data-scale="0.48")
-    include tools-libraries-cubehero
-  #tools-libraries-bld3r.step(data-x='220',data-y='747',data-scale="0.48")
+  #tools-libraries-bld3r.step(data-x='220',data-y='450',data-scale="0.48")
     include tools-libraries-bld3r
-  #tools-libraries-fabster.step(data-x='-220',data-y='1044',data-scale="0.48")
-    include tools-libraries-fabster
-  #tools-libraries-ponoko.step(data-x='220',data-y='1044',data-scale="0.48")
+  #tools-libraries-ponoko.step(data-x='-220',data-y='747',data-scale="0.48")
     include tools-libraries-ponoko
-  #tools-libraries-3dhacker.step(data-x='-220',data-y='1341',data-scale="0.48")
+  #tools-libraries-3dhacker.step(data-x='220',data-y='747',data-scale="0.48")
     include tools-libraries-3dhacker
-  #tools-libraries-myminifactory.step(data-x='220',data-y='1341',data-scale="0.48")
+  #tools-libraries-myminifactory.step(data-x='-220',data-y='1044',data-scale="0.48")
     include tools-libraries-myminifactory
 #tools-libraries-github.step(data-x='10000')
   include tools-libraries-github
@@ -126,8 +126,9 @@
     include haxe-compilers-2
   #haxe-runners.step(data-x='-220',data-y='747',data-scale="0.48")
     include haxe-runners
-  #haxe-communicators.step(data-x='220',data-y='747',data-scale="0.48")
-    // TODO
+  #haxe-runners-2.step(data-x='220',data-y='747',data-scale="0.48")
+    include haxe-runners-2
+  #haxe-communicators.step(data-x='-220',data-y='1044',data-scale="0.48")
     include haxe-communicators
 #code-bonescript.step(data-x="13000")
   include code-bonescript
@@ -137,5 +138,15 @@
     include code-gps
   #code-gps-2.step(data-x='-220',data-y='747',data-scale="0.48")
     include code-gps-2
-#end.step(data-x="14000")
+#experiments.step(data-x="14000")
+  include experiments
+  #experiments-keyboard.step(data-x='-220',data-y='450',data-scale="0.48")
+    include experiments-keyboard
+  #experiments-human.step(data-x='220',data-y='450',data-scale="0.48")
+    include experiments-human
+  #experiments-cnc.step(data-x='-220',data-y='747',data-scale="0.48")
+    include experiments-cnc
+  #experiments-3dprinter.step(data-x='220',data-y='747',data-scale="0.48")
+    include experiments-3dprinter
+#end.step(data-x="15000")
   include end
