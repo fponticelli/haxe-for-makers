@@ -32,13 +32,19 @@
   include tools-3dprinters
   #tools-ffe.step(data-x='-220',data-y='450',data-scale="0.48")
     include tools-ffe
-  #tools-sla.step(data-x='220',data-y='450',data-scale="0.48")
+  #tools-filament.step(data-x='220',data-y='450',data-scale="0.48")
+    include tools-filament
+  #tools-sla.step(data-x='-220',data-y='747',data-scale="0.48")
     include tools-sla
-  #tools-powderdeposition.step(data-x='-220',data-y='747',data-scale="0.48")
+  #tools-resin.step(data-x='220',data-y='747',data-scale="0.48")
+    include tools-resin
+  #tools-powderdeposition.step(data-x='-220',data-y='1044',data-scale="0.48")
     include tools-powderdeposition
-  #tools-dmls.step(data-x='220',data-y='747',data-scale="0.48")
+  #tools-dmls.step(data-x='220',data-y='1044',data-scale="0.48")
     include tools-dmls
-  #tools-bio.step(data-x='-220',data-y='1044',data-scale="0.48")
+  #tools-building.step(data-x='-220',data-y='1341',data-scale="0.48")
+    include tools-building
+  #tools-bio.step(data-x='220',data-y='1341',data-scale="0.48")
     include tools-bio
 #tools-machining.step(data-x='5000')
   include tools-machining
@@ -142,11 +148,13 @@
   include experiments
   #experiments-keyboard.step(data-x='-220',data-y='450',data-scale="0.48")
     include experiments-keyboard
-  #experiments-human.step(data-x='220',data-y='450',data-scale="0.48")
-    include experiments-human
+  #experiments-octopus.step(data-x='220',data-y='450',data-scale="0.48")
+    include experiments-octopus
   #experiments-cnc.step(data-x='-220',data-y='747',data-scale="0.48")
     include experiments-cnc
   #experiments-3dprinter.step(data-x='220',data-y='747',data-scale="0.48")
     include experiments-3dprinter
-#end.step(data-x="15000")
+#creativity.step(data-x="15000")
+  include creativity
+#end.step(data-x="16000")
   include end
