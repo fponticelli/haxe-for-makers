@@ -26,8 +26,6 @@
     include os-ecology-2
 #tools.step(data-x='3000')
   include tools
-  #tools-machines.step(data-x='-220',data-y='450',data-scale="0.48")
-    include tools-machines
 #tools-3dprinters.step(data-x='4000')
   include tools-3dprinters
   #tools-ffe.step(data-x='-220',data-y='450',data-scale="0.48")
@@ -104,8 +102,6 @@
     include tools-libraries-ponoko
   #tools-libraries-3dhacker.step(data-x='220',data-y='747',data-scale="0.48")
     include tools-libraries-3dhacker
-  #tools-libraries-myminifactory.step(data-x='-220',data-y='1044',data-scale="0.48")
-    include tools-libraries-myminifactory
 #tools-libraries-github.step(data-x='10000')
   include tools-libraries-github
 #tools-libraries-github-2.step(data-x='10000',data-y='900')
@@ -146,13 +142,15 @@
     include code-gps-2
 #experiments.step(data-x="14000")
   include experiments
-  #experiments-keyboard.step(data-x='-220',data-y='450',data-scale="0.48")
+  #experiments-components.step(data-x='-220',data-y='450',data-scale="0.48")
+    include experiments-components
+  #experiments-keyboard.step(data-x='220',data-y='450',data-scale="0.48")
     include experiments-keyboard
-  #experiments-octopus.step(data-x='220',data-y='450',data-scale="0.48")
+  #experiments-octopus.step(data-x='-220',data-y='747',data-scale="0.48")
     include experiments-octopus
-  #experiments-cnc.step(data-x='-220',data-y='747',data-scale="0.48")
+  #experiments-cnc.step(data-x='220',data-y='747',data-scale="0.48")
     include experiments-cnc
-  #experiments-3dprinter.step(data-x='220',data-y='747',data-scale="0.48")
+  #experiments-3dprinter.step(data-x='-220',data-y='1044',data-scale="0.48")
     include experiments-3dprinter
 #creativity.step(data-x="15000")
   include creativity

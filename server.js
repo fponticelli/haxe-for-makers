@@ -22,8 +22,6 @@ app.use(stylus.middleware({
   compile: compile
 }));
 
-app.use(express.static(cwd + '/www'));
-
 ['index', 'presentation-screen', 'index-notes'].forEach(function (value) {
   app.get('/' + (value === 'index' ? '' : value + '.html'), function (req, res, next) {
     res.render(value, function(err, html) {
@@ -37,6 +35,8 @@ app.use(express.static(cwd + '/www'));
     });
   });
 });
+
+app.use(express.static(cwd + '/www'));
 
 livereload(app, {
   watchDir: cwd

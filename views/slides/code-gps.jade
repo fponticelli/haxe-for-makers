@@ -11,7 +11,7 @@ pre.sh_haxe.
           switch(e.data)
           {
             case "\n":
-              onData(buf);
+              onInstruction(buf);
               buf = "";
             case c:
               buf += c;

@@ -16,7 +16,7 @@ pre.sh_haxe.
   }
 
   public static function main() {
-    var led = new RGBLed("P8_19", "P9_14", "P8_13", false),
+    var led = new RGBLed("P8_19", "P9_14", "P8_13"),
         hsl = new HSL(0, 1, 0.5);
     js.Node.setInterval(function() {
       led.setColor(hsl);

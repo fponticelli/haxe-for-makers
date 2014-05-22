@@ -1,7 +1,7 @@
 h1 GPS #2
 
 pre.sh_haxe.
-  function onData(line : String) {
+  function onInstruction(line : String) {
     if(line.substr(0, 3) != "$GP")
       throw 'Invalid line: $line';
     switch(line.substr(3, 3)) {
