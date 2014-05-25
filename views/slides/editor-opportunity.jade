@@ -1,2 +1,31 @@
 h3 Editors
 h2 Opportunity for Haxe Developers?
+
+.split-big
+	.left
+		br
+		pre.size80.sh_haxe.
+			return ThreeJS.toModel(
+				Box.create(-0.5, 1.0)
+					.union(
+						Box.create(0.1, 1.0))
+					.subtract(
+						Box.create(-1.1, 1.0))
+					.intersect(
+						Sphere.create(0.0, 0.7))
+					.subtract(
+						Sphere.create(0.5, 0.35))
+					.subtract(
+						Cylinder.create([0.0,0.0,-0.95],
+							[0.0,0.0,0.95], 0.25))
+					.subtract(
+						Cylinder.create([0.0,-0.95,0.0],
+							[0.0,0.95,0.0], 0.35))
+					.subtract(
+						Cylinder.create(-0.95,0.0,0.0],
+							[0.95,0.0,0.0], 0.15))
+			);
+	.right
+		figure
+			a(href="https://rawgit.com/fponticelli/chad/master/bin/index.html",target="_blank")
+				img.size80(src="images/chad.png")
